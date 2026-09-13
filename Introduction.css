@@ -150,12 +150,12 @@ body{
 }
 
 #line1{
-    border-right: 3px solid #ffffff;
+    border-right: 1px solid #ffffff;
     animation: typing1 1.5s steps(12) forwards,blink-line1 0.75s step-end 2 forwards;
 }
 
 #line2{
-    border-right: 3px solid transparent;
+    border-right: 1px solid transparent;
     animation: typing2 1.4s steps(14) 1.5s forwards, blink-line2 0.75s step-end 1.5s infinite; 
 }
 
