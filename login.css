@@ -1,0 +1,237 @@
+body{
+    margin: 0;
+    background: linear-gradient(135deg, #383838 0%, #000000 50%, #0c0c0c 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+
+    background: rgba(255, 255, 255, 0.041); /* Tiny amount of white tint */
+
+    border: 0.3px solid rgba(255, 255, 255, 0.13);
+    border-radius: 10px;
+    width: 85vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    
+
+}
+
+#login-container{
+    display: flex;
+    flex-direction: column;
+    width: 33vw;
+    padding: 5vh;
+    font-family: "Roboto Slab", serif;
+    font-size: 7vh;
+    color: white;
+    gap: 1vh;
+    
+}
+
+#logo-header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#logo{
+    width: 4vw;
+}
+
+#brand-name{
+    font-size: 3.5vh;
+    position: relative;
+    top: -0.5vh
+
+}
+
+#login-word{
+    display: flex;
+    justify-content: center;
+
+}
+
+#emailAddressWord{
+    font-size: 3vh;
+
+}
+
+#passwordWord{
+    position: relative;
+    top: 4.8vh;
+    font-size: 3vh;
+}
+
+#emailAddress{
+    border-radius: 2vh;
+    width: 30.5vw;
+    height: 1vh;
+    font-size: 3vh;
+    padding: 3vh;
+    transition: outline 0.1s ease;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+#emailAddress:focus{
+    outline: none;
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    transition: outline 0.1s ease;
+}
+
+#Password{
+    position: relative;
+    top: 5vh;
+    border-radius: 2vh;
+    width: 30.5vw;
+    height: 1vh;
+    font-size: 3vh;
+    padding: 3vh;
+    transition: outline 0.1s ease;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+#Password:focus{
+    outline: none;
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    transition: outline 0.1s ease;
+}
+
+
+#design-container{
+    width: 47.5vw;
+    background-image: url(./photos/tech-gadget-array-stockcake.jpg);
+    background-size: cover;
+    border-top-right-radius: 7vh;
+    border-bottom-right-radius: 7vh;
+    overflow: hidden;
+}
+
+#forgot-password{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: 5.5vh;
+    left: 1.5vw;
+    font-size: 2.2vh;
+    background-color: transparent;
+    border: none;
+    color: rgb(196, 196, 196);
+    text-decoration: underline;
+}
+
+#forgot-password:hover{
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+
+}
+
+#continue-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 4vh;
+
+}
+
+.line1{
+    border: none;
+    background-color: white;
+    width: 11vw;
+    height: 0.5px;
+}
+
+#continue{
+    position: relative;
+    top: 1.5vh; 
+    font-size: 2.2vh;
+}
+
+.line2{
+    border: none;
+    background-color: white;
+    width: 11vw;
+    height: 0.5px;
+}
+
+#continue-with-accounts{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 4vh;
+    gap: 3vh
+}
+
+#google{
+    border: 0.5px solid rgb(139, 139, 139);
+    height: 8vh;
+    width: 10vw;
+    background-color: black;
+    border-radius: 3px;
+    transition: background-color 0.1s ease;
+}
+
+#google:hover{
+    background-color: white;
+    transition: background-color 0.1s ease;
+    cursor: pointer;
+}
+
+#apple{
+    border: 0.5px solid rgb(139, 139, 139);
+    height: 8vh;
+    width: 10vw;
+    background-color: black;
+    border-radius: 3px;
+    transition: background-color 0.1s ease;
+}
+
+#apple:hover{
+    background-color: white;
+    transition: background-color 0.1s ease;
+    cursor: pointer;
+}
+
+#signup-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+#Signup1{
+    position: relative;
+    top: 8vh;
+    font-size: 2.3vh;
+    color: rgb(196, 196, 196);
+}
+
+#Signup2{
+    position: relative;
+    top: 8vh;
+    left: 0.5vw;
+    font-size: 2.3vh;
+    color: rgb(196, 196, 196);
+    text-decoration: underline;
+}
+
+#Signup2:hover{
+    cursor: pointer;
+    color: white;
+}
