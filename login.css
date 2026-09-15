@@ -128,8 +128,8 @@ main{
     display: flex;
     justify-content: flex-end;
     position: relative;
-    top: 5.5vh;
-    left: 1.5vw;
+    top: 7vh;
+    left: 0.5vw;
     font-size: 2.2vh;
     background-color: transparent;
     border: none;
@@ -147,7 +147,7 @@ main{
     display: flex;
     flex-direction: row;
     position: relative;
-    top: 4vh;
+    top: 6.5vh;
 
 }
 
@@ -175,7 +175,7 @@ main{
     display: flex;
     justify-content: center;
     position: relative;
-    top: 4vh;
+    top: 6.5vh;
     gap: 3vh
 }
 
@@ -183,9 +183,10 @@ main{
     border: 0.5px solid rgb(139, 139, 139);
     height: 8vh;
     width: 10vw;
-    background-color: black;
-    border-radius: 3px;
+    background-color: rgba(31, 31, 31, 0.704);
+    border-radius: 0.6vw;
     transition: background-color 0.1s ease;
+    box-shadow: 0 0 1vh 1vh rgba(255, 255, 255, 0.07);
 }
 
 #google:hover{
@@ -194,14 +195,26 @@ main{
     cursor: pointer;
 }
 
+#google-logo{
+    width: 2vw;
+}
+
+
+/* APPLE */
 #apple{
     border: 0.5px solid rgb(139, 139, 139);
     height: 8vh;
     width: 10vw;
-    background-color: black;
-    border-radius: 3px;
+    background-color: rgba(31, 31, 31, 0.704);
+    border-radius: 0.6vw;
     transition: background-color 0.1s ease;
+    box-shadow: 0 0 1vh 1vh rgba(255, 255, 255, 0.07);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
+
 
 #apple:hover{
     background-color: white;
@@ -209,25 +222,36 @@ main{
     cursor: pointer;
 }
 
+#apple-logo{
+    width: 2vw;
+    transition: filter 0.1s ease;
+
+}
+
+#apple:hover #apple-logo {
+    filter: brightness(0); 
+}
+
+/* Signup */
 #signup-container{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: row;
+    gap: 0.7vh;
 }
 
 #Signup1{
     position: relative;
-    top: 8vh;
-    font-size: 2.3vh;
-    color: rgb(196, 196, 196);
+    top: 11vh;
+    font-size: 2vh;
+    color: rgb(170, 170, 170);
 }
 
 #Signup2{
     position: relative;
-    top: 8vh;
-    left: 0.5vw;
-    font-size: 2.3vh;
-    color: rgb(196, 196, 196);
+    top: 11vh;
+    font-size: 2vh;
+    color: rgb(170, 170, 170);
     text-decoration: underline;
 }
 
