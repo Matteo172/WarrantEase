@@ -199,6 +199,8 @@ main{
     width: 2vw;
 }
 
+
+/* APPLE */
 #apple{
     border: 0.5px solid rgb(139, 139, 139);
     height: 8vh;
@@ -207,9 +209,11 @@ main{
     border-radius: 0.6vw;
     transition: background-color 0.1s ease;
     box-shadow: 0 0 1vh 1vh rgba(255, 255, 255, 0.07);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
-
 
 
 #apple:hover{
@@ -218,6 +222,17 @@ main{
     cursor: pointer;
 }
 
+#apple-logo{
+    width: 2vw;
+    transition: filter 0.1s ease;
+
+}
+
+#apple:hover #apple-logo {
+    filter: brightness(0); 
+}
+
+/* Signup */
 #signup-container{
     display: flex;
     justify-content: center;
@@ -227,14 +242,14 @@ main{
 
 #Signup1{
     position: relative;
-    top: 10vh;
+    top: 11vh;
     font-size: 2vh;
     color: rgb(170, 170, 170);
 }
 
 #Signup2{
     position: relative;
-    top: 10vh;
+    top: 11vh;
     font-size: 2vh;
     color: rgb(170, 170, 170);
     text-decoration: underline;
