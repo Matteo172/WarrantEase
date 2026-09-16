@@ -55,9 +55,11 @@ main{
 
 }
 
+
 #login-word{
     display: flex;
     justify-content: center;
+    font-size: 5.5vh;
 
 }
 
@@ -253,6 +255,9 @@ main{
     font-size: 2vh;
     color: rgb(170, 170, 170);
     text-decoration: underline;
+    background-color: transparent;
+    border: none;
+
 }
 
 #Signup2:hover{
