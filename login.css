@@ -26,7 +26,48 @@ main{
 
 }
 
+/* animation  */
+@media (prefers-reduced-motion: no-preference) {
+    @view-transition {
+        navigation: auto;
+    }
+}
+
+@keyframes smoothFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px); /* Optional: gentle lift from below while fading */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes smoothFadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Apply the custom animations exclusively to your isolated credential containers */
+::view-transition-old(login-form-panel),
+::view-transition-old(signup-form-panel) {
+    animation: 250ms ease out smoothFadeOut;
+}
+
+::view-transition-new(login-form-panel),
+::view-transition-new(signup-form-panel) {
+    animation: 400ms cubic-bezier(0.4, 0, 0.2, 1) both smoothFadeIn;
+}
+
+/* Optional: Tune the duration of the traveling image sliding speed (Default is usually ~250ms) */
+::view-transition-group(sliding-image-panel) {
+    animation-duration: 500ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 #login-container{
+    view-transition-name: login-form-panel;
     display: flex;
     flex-direction: column;
     width: 33vw;
@@ -117,12 +158,14 @@ main{
 }
 
 
+
 #design-container{
+    view-transition-name: sliding-image-panel;
     width: 47.5vw;
     background-image: url(./photos/tech-gadget-array-stockcake.jpg);
     background-size: cover;
-    border-top-right-radius: 7vh;
-    border-bottom-right-radius: 7vh;
+    border-top-right-radius: 1.5vh;
+    border-bottom-right-radius: 1.5vh;
     overflow: hidden;
 }
 
@@ -280,7 +323,7 @@ main{
     padding: 3vh;
     background-color: rgba(43, 49, 77, 0.575);
     color: white;
-    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.192);
     transition: background-color 0.1s, font-size 0.3s, color 0.1s ease;
 }
 
@@ -292,4 +335,56 @@ main{
     color: black;
 
 
+}
+
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+/* 2. Configure the travelling sliding panel behavior */
+::view-transition-group(sliding-image-panel) {
+    /* Use a fluid ease-out curve (smoother than the default 'ease') */
+    animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); 
+    animation-duration: 650ms; /* Slowed down slightly so you can see it slide */
+}
+
+/* 3. FIX THE JITTER/STRETCHING (Crucial Step) */
+::view-transition-old(sliding-image-panel),
+::view-transition-new(sliding-image-panel) {
+    /* Force the browser to clip the snapshot window rather than stretching the pixels */
+    object-fit: cover; 
+    height: 100%;
+    width: 100%;
+}
+
+/* 4. Smooth out your Fade In / Fade Out custom keyframes */
+@keyframes modernFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98) translateY(10px); /* Minor elegant pop effect */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes modernFadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* 5. Attach the clean fades to your form panels */
+::view-transition-old(login-form-panel),
+::view-transition-old(signup-form-panel) {
+    animation: 200ms ease-in forwards modernFadeOut;
+}
+
+::view-transition-new(login-form-panel),
+::view-transition-new(signup-form-panel) {
+    animation: 450ms cubic-bezier(0.22, 1, 0.36, 1) both modernFadeIn;
+    animation-delay: 150ms; /* Gives the image a head-start before form fades in */
 }
