@@ -12,9 +12,7 @@ body{
 }
 
 main{
-
     background: rgba(255, 255, 255, 0.041); /* Tiny amount of white tint */
-
     border: 0.3px solid rgba(255, 255, 255, 0.13);
     border-radius: 10px;
     width: 85vw;
@@ -66,23 +64,37 @@ main{
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-#login-container{
-    view-transition-name: login-form-panel;
+#design-container{
+    view-transition-name: sliding-image-panel;
+    width: 47.5vw;
+    background-image: url(./photos/tech-gadget-array-stockcake.jpg);
+    background-size: cover;
+    border-top-left-radius: 1.5vh;
+    border-bottom-left-radius: 1.5vh;
+    overflow: hidden;
+}
+
+
+#signup-container{
+    view-transition-name: signup-form-panel;
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 33vw;
     padding: 5vh;
     font-family: "Roboto Slab", serif;
     font-size: 7vh;
     color: white;
     gap: 1vh;
-    
 }
 
+/* logo and WarrantEase */
 #logo-header{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
+    right: 9vw;
 }
 
 #logo{
@@ -96,38 +108,74 @@ main{
 
 }
 
-
-#login-word{
+/* Create an Account */
+#signup-word{
     display: flex;
-    justify-content: center;
+    font-weight: 400;
     font-size: 5.5vh;
 
 }
 
-#emailAddressWord{
-    font-size: 3vh;
-
+#account-container{
+    display: flex;
+    flex-direction: row;
+    gap: 0.2vh;
 }
 
-#passwordWord{
+#account{
+    top: 11vh;
+    font-size: 2vh;
+    color: rgb(170, 170, 170);
+}
+
+#login-button{
+    background-color: transparent;
+    color: rgb(190, 190, 190);
+    font-family: "Roboto Slab", serif;
+    border: none;
+    font-size: 2vh;
+    text-decoration: underline;
+}
+
+#login-button:hover{
+    color: white;
+    cursor: pointer;
+}
+
+#user-container{
+    display: flex;
+    flex-direction: row;
     position: relative;
     top: 2vh;
-    font-size: 3vh;
+    gap: 4vh;
 }
 
-#emailAddress{
-    border-radius: 2vh;
-    width: 30.5vw;
+
+#first-name{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+    color: rgba(255, 255, 255, 0.74);
+
+}
+
+#firstNameWord{
+    font-size: 2vh;
+}
+
+#firstName{
+    border-radius: 1vh;
+    width: 12vw;
     height: 1vh;
-    font-size: 3vh;
-    padding: 3vh;
+    font-size: 2vh;
+    padding: 2vh;
     transition: outline 0.1s ease;
     background-color: rgba(255, 255, 255, 0.06);
     border: 0.5px solid rgba(255, 255, 255, 0.1);
-    color: white;
+    color: rgba(255, 255, 255, 0.849);
 }
 
-#emailAddress:focus{
+#firstName:focus{
     outline: none;
     background: rgba(255, 255, 255, 0.12);
     border-color: rgba(255, 255, 255, 0.4);
@@ -135,21 +183,19 @@ main{
     transition: outline 0.1s ease;
 }
 
-#Password{
-    position: relative;
-    top: 2vh;
-    border-radius: 2vh;
-    width: 30.5vw;
+#lastName{
+    border-radius: 1vh;
+    width: 12vw;
     height: 1vh;
-    font-size: 3vh;
-    padding: 3vh;
+    font-size: 2vh;
+    padding: 2vh;
     transition: outline 0.1s ease;
     background-color: rgba(255, 255, 255, 0.06);
     border: 0.5px solid rgba(255, 255, 255, 0.1);
     color: white;
 }
 
-#Password:focus{
+#lastName:focus{
     outline: none;
     background: rgba(255, 255, 255, 0.12);
     border-color: rgba(255, 255, 255, 0.4);
@@ -157,184 +203,16 @@ main{
     transition: outline 0.1s ease;
 }
 
-
-
-#design-container{
-    view-transition-name: sliding-image-panel;
-    width: 47.5vw;
-    background-image: url(./photos/tech-gadget-array-stockcake.jpg);
-    background-size: cover;
-    border-top-right-radius: 1.5vh;
-    border-bottom-right-radius: 1.5vh;
-    overflow: hidden;
-}
-
-#forgot-password{
+#last-name{
     display: flex;
-    justify-content: flex-end;
-    position: relative;
-    top: 2vh;
-    left: 0.5vw;
-    font-size: 2.2vh;
-    background-color: transparent;
-    border: none;
-    color: rgb(196, 196, 196);
-    text-decoration: underline;
-}
-
-#forgot-password:hover{
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-
-}
-
-#continue-container{
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 6vh;
-
-}
-
-.line1{
-    border: none;
-    background-color: rgba(255, 255, 255, 0.842);
-    width: 11vw;
-    height: 0.5px;
-}
-
-#continue{
-    position: relative;
-    top: 1.5vh; 
-    font-size: 2.2vh;
-    color: rgba(255, 255, 255, 0.842);
-}
-
-.line2{
-    border: none;
-    background-color: rgba(255, 255, 255, 0.842);
-    width: 11vw;
-    height: 0.5px;
-}
-
-#continue-with-accounts{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: 5.5vh;
-    gap: 3vh
-}
-
-#google{
-    border: 0.5px solid rgb(139, 139, 139);
-    height: 8vh;
-    width: 10vw;
-    background-color: rgba(31, 31, 31, 0.704);
-    border-radius: 0.6vw;
-    transition: background-color 0.1s ease;
-    box-shadow: 0 0 1vh 1vh rgba(255, 255, 255, 0.07);
-}
-
-#google:hover{
-    background-color: white;
-    transition: background-color 0.1s ease;
-    cursor: pointer;
-}
-
-#google-logo{
-    width: 2vw;
+    flex-direction: column;
+    gap: 0.5vh;
+    color: rgba(255, 255, 255, 0.74);
 }
 
 
-/* APPLE */
-#apple{
-    border: 0.5px solid rgb(139, 139, 139);
-    height: 8vh;
-    width: 10vw;
-    background-color: rgba(31, 31, 31, 0.704);
-    border-radius: 0.6vw;
-    transition: background-color 0.1s ease;
-    box-shadow: 0 0 1vh 1vh rgba(255, 255, 255, 0.07);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-
-#apple:hover{
-    background-color: white;
-    transition: background-color 0.1s ease;
-    cursor: pointer;
-}
-
-#apple-logo{
-    width: 2vw;
-    transition: filter 0.1s ease;
-
-}
-
-#apple:hover #apple-logo {
-    filter: brightness(0); 
-}
-
-/* Signup */
-#signup-container{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    gap: 0.7vh;
-}
-
-#Signup1{
-    position: relative;
-    top: 8.5vh;
+#lastNameWord{
     font-size: 2vh;
-    color: rgb(170, 170, 170);
-}
-
-#Signup2{
-    position: relative;
-    top: 8.5vh;
-    font-size: 2vh;
-    color: rgb(170, 170, 170);
-    text-decoration: underline;
-    background-color: transparent;
-    border: none;
-
-}
-
-#Signup2:hover{
-    cursor: pointer;
-    color: white;
-}
-
-#signin{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 5vh;
-    height: 5vh;
-    width: 30vw;
-    left: 1.5vw;
-    border-radius: 2vh;
-    font-size: 3vh;
-    padding: 3vh;
-    background-color: rgba(43, 49, 77, 0.575);
-    color: white;
-    border: 0.5px solid rgba(255, 255, 255, 0.192);
-    transition: background-color 0.1s, font-size 0.3s, color 0.1s ease;
-}
-
-#signin:hover{
-    cursor: pointer;
-    background-color: #d1d1d1;
-    transition: background-color 0.3s, font-size 0.3s, color 0.1s ease;
-    font-size: 3.2vh;
-    color: black;
-
-
 }
 
 
