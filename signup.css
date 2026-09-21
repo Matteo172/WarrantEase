@@ -120,6 +120,8 @@ main{
     display: flex;
     flex-direction: row;
     gap: 0.2vh;
+    position: relative;
+    top: 6vh;
 }
 
 #account{
@@ -220,7 +222,7 @@ main{
     flex-direction: column;
     width: 29.9vw;
     position: relative;
-    top: 2.5vh;
+    top: 3.5vh;
     gap: 0.7vh;
 }
 
@@ -282,7 +284,7 @@ main{
 #confirm-password{
     font-size: 2vh;
     position: relative;
-    top: 1.5vh;
+    top: 2vh;
     color: rgba(255, 255, 255, 0.74);
 }
 
@@ -297,7 +299,7 @@ main{
     border: 0.5px solid rgba(255, 255, 255, 0.1);
     color: white;
     position: relative;
-    top: 1.5vh;
+    top: 2vh;
 }
 
 #confirm:focus{
@@ -307,6 +309,100 @@ main{
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     transition: outline 0.1s ease;
 }
+
+#continue-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 5vh;
+    gap: 1vh;
+
+}
+
+.line1{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.74);
+    width: 11vw;
+    height: 0.5px;
+}
+
+#continue{
+    position: relative;
+    top: 2.3vh; 
+    font-size: 1.6vh;
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.line2{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.74);
+    width: 11vw;
+    height: 0.5px;
+}
+
+#continue-with-accounts{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: row;
+    top: 4.5vh;
+    gap: 5vh
+}
+
+#google{
+    border: 0.5px solid rgb(139, 139, 139);
+    height: 8vh;
+    width: 10vw;
+    background-color: rgba(31, 31, 31, 0.704);
+    border-radius: 0.6vw;
+    transition: background-color 0.1s ease;
+    box-shadow: 0 0 1vh 1vh rgba(255, 255, 255, 0.07);
+}
+
+#google:hover{
+    background-color: white;
+    transition: background-color 0.1s ease;
+    cursor: pointer;
+}
+
+#google-logo{
+    width: 2vw;
+}
+
+
+/* APPLE */
+#apple{
+    border: 0.5px solid rgb(139, 139, 139);
+    height: 8vh;
+    width: 10vw;
+    background-color: rgba(31, 31, 31, 0.704);
+    border-radius: 0.6vw;
+    transition: background-color 0.1s ease;
+    box-shadow: 0 0 1vh 1vh rgba(255, 255, 255, 0.07);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+#apple:hover{
+    background-color: white;
+    transition: background-color 0.1s ease;
+    cursor: pointer;
+}
+
+#apple-logo{
+    width: 2vw;
+    transition: filter 0.1s ease;
+
+}
+
+#apple:hover #apple-logo {
+    filter: brightness(0); 
+}
+
+
 
 
 ::view-transition-old(root),
