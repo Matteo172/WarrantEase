@@ -222,7 +222,7 @@ main{
     flex-direction: column;
     width: 29.9vw;
     position: relative;
-    top: 3.5vh;
+    top: 2.3vh;
     gap: 0.7vh;
 }
 
@@ -351,8 +351,8 @@ main{
 
 #google{
     border: 0.5px solid rgb(139, 139, 139);
-    height: 8vh;
-    width: 10vw;
+    height: 6vh;
+    width: 8vw;
     background-color: rgba(31, 31, 31, 0.704);
     border-radius: 0.6vw;
     transition: background-color 0.1s ease;
@@ -366,15 +366,15 @@ main{
 }
 
 #google-logo{
-    width: 2vw;
+    width: 1.5vw;
 }
 
 
 /* APPLE */
 #apple{
     border: 0.5px solid rgb(139, 139, 139);
-    height: 8vh;
-    width: 10vw;
+    height: 6vh;
+    width: 8vw;
     background-color: rgba(31, 31, 31, 0.704);
     border-radius: 0.6vw;
     transition: background-color 0.1s ease;
@@ -393,7 +393,7 @@ main{
 }
 
 #apple-logo{
-    width: 2vw;
+    width: 1.5vw;
     transition: filter 0.1s ease;
 
 }
@@ -402,6 +402,33 @@ main{
     filter: brightness(0); 
 }
 
+#signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 6.5vh;
+    height: 5vh;
+    width: 30vw;
+    left: 0.2vw;
+    border-radius: 2vh;
+    font-size: 3vh;
+    padding: 3vh;
+    background-color: rgba(43, 49, 77, 0.575);
+    color: white;
+    border: 0.5px solid rgba(255, 255, 255, 0.192);
+    transition: background-color 0.1s, font-size 0.3s, color 0.1s ease;
+}
+
+#signup:hover{
+    cursor: pointer;
+    background-color: #d1d1d1;
+    transition: background-color 0.3s, font-size 0.3s, color 0.1s ease;
+    font-size: 3.2vh;
+    color: black;
+
+
+}
 
 
 
