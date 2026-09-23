@@ -113,6 +113,8 @@ main{
     display: flex;
     font-weight: 400;
     font-size: 5.5vh;
+    position: relative;
+    bottom: 2vh;
 
 }
 
@@ -121,7 +123,7 @@ main{
     flex-direction: row;
     gap: 0.2vh;
     position: relative;
-    top: 6vh;
+    top: 3vh;
 }
 
 #account{
@@ -137,6 +139,8 @@ main{
     border: none;
     font-size: 2vh;
     text-decoration: underline;
+    position: relative;
+    top: -0.1vh;
 }
 
 #login-button:hover{
@@ -148,7 +152,7 @@ main{
     display: flex;
     flex-direction: row;
     position: relative;
-    top: 2vh;
+    top: -0.7vh;
     gap: 4vh;
 }
 
@@ -158,6 +162,7 @@ main{
     flex-direction: column;
     gap: 0.5vh;
     color: rgba(255, 255, 255, 0.74);
+    position: relative;
 
 }
 
@@ -222,7 +227,7 @@ main{
     flex-direction: column;
     width: 29.9vw;
     position: relative;
-    top: 2.3vh;
+    top: 0vh;
     gap: 0.7vh;
 }
 
@@ -314,7 +319,7 @@ main{
     display: flex;
     flex-direction: row;
     position: relative;
-    top: 5vh;
+    top: 3vh;
     gap: 1vh;
 
 }
@@ -345,7 +350,7 @@ main{
     justify-content: center;
     position: relative;
     flex-direction: row;
-    top: 4.5vh;
+    top: 2vh;
     gap: 5vh
 }
 
@@ -407,7 +412,7 @@ main{
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 6.5vh;
+    top: 4vh;
     height: 5vh;
     width: 30vw;
     left: 0.2vw;
