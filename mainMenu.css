@@ -1,3 +1,73 @@
 body{
+    margin: 0;
+    background-color: rgb(29, 29, 29);
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid rgba(148, 148, 148, 0.151);
+    position: fixed;
+    height: 94.5%;
+    width: 3.5vw;
+    left: 0.5vw;
+    top: 0.7vh;
+    border-radius: 3vh;
+    background-color: rgba(48, 48, 48, 0.322);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.267);
+    padding: 2vh 0; 
     
+
+}
+
+#logo-container{
+
+}
+
+#logo{
+    width: 2.5vw;
+    position: relative;
+    bottom: 41vh;
+    left: 0.1vw;
+    transition: transform 0.2s ease;
+    object-fit: contain;
+}
+
+#logo:hover{
+    cursor: pointer;
+    content: url(./photos/expand_circle_right_50dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png);
+    width: 2.5vw;
+    transform: scale(0.85); 
+}
+
+
+#sidebar-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#settings{
+    width: 2.5vh;
+    position: relative;
+    top: 39vh;
+    left: 1.2vw;
+    height: auto;
+}
+
+#account{
+    width: 2.3vw;
+    position: relative;
+    top: 41vh;
+    left: 0.7vw;
+    height: auto;
 }
