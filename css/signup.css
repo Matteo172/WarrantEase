@@ -67,7 +67,7 @@ main{
 #design-container{
     view-transition-name: sliding-image-panel;
     width: 47.5vw;
-    background-image: url(./photos/tech-gadget-array-stockcake.jpg);
+    background-image: url(../photos/tech-gadget-array-stockcake.jpg);
     background-size: cover;
     border-top-left-radius: 1.5vh;
     border-bottom-left-radius: 1.5vh;
