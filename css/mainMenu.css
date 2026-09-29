@@ -9,7 +9,7 @@ body{
 }
 
 
-nav{
+#side{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,45 +29,80 @@ nav{
 }
 
 #logo-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 22.7vh;
 
 }
 
 #logo{
     width: 2.5vw;
     position: relative;
-    bottom: 41vh;
-    left: 0.1vw;
     transition: transform 0.2s ease;
     object-fit: contain;
 }
 
 #logo:hover{
     cursor: pointer;
-    content: url(./photos/expand_circle_right_50dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png);
+    content: url(../photos/expand_circle_right_50dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png);
     width: 2.5vw;
     transform: scale(0.85); 
 }
 
 
-#sidebar-button{
+#sidebar-bottom{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    top: 22vh;
+    gap: 2.5vh;
 }
 
 #settings{
-    width: 2.5vh;
+    width: 3vh;
     position: relative;
-    top: 39vh;
-    left: 1.2vw;
     height: auto;
 }
 
 #account{
     width: 2.3vw;
     position: relative;
-    top: 41vh;
-    left: 0.7vw;
     height: auto;
+}
+
+#sidebar-main{
+    display: flex;
+    gap: 3.3vh;
+    flex-direction: column;
+    position: relative;
+    bottom: 5vh;
+}
+
+hr{
+    width: 2.5vw;
+    position: relative;
+    top: 10vh;
+}
+
+
+/* navigation top */
+
+#top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border: 1px solid rgba(148, 148, 148, 0.151);
+    position: relative;
+    height: 0.5vw;
+    width: 93%;
+    left: 5.5vw;
+    top: 1.3vh;
+    border-radius: 3vh;
+    background-color: rgba(48, 48, 48, 0.322);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.267);
+    padding: 2vh 0; 
 }
