@@ -115,10 +115,49 @@ hr{
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    border: 0.5px solid white;
     width: 20vw;
     height: 3.5vh;
     border-radius: 10vh;
-    left: 30vw;
-    background-color: rgba(48, 48, 48, 0.678);
+    left: 33vw;
+    gap: 0.5vh;
+
+}
+
+.search-icon{
+    height: 2.5vh;
+    position: relative;
+    right: 30vw;
+}
+
+#search-type{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 30vw;
+    height: 3.5vh;
+    border-radius: 10vh;
+    left: 0vw;
+    background-color: rgba(255, 255, 255, 0.06);
+    padding: 1vh;
+    gap: 0.5vh;
+    transition: outline 0.1s ease, background-color 0.05s ease-out;
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    box-shadow: 0 0 15px rgba(187, 187, 187, 0.055);
+    padding: 1.5vh;
+}
+
+#search-type:hover{
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.12);
+    transition: background-color 0.05s ease-out;
+}
+
+#search-type:focus{
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    transition: outline 0.1s ease;
 }
