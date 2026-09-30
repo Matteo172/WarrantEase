@@ -1,0 +1,390 @@
+body{
+    margin: 0;
+    background: linear-gradient(135deg, #383838 0%, #000000 50%, #0c0c0c 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+
+    background: rgba(255, 255, 255, 0.041); /* Tiny amount of white tint */
+
+    border: 0.3px solid rgba(255, 255, 255, 0.13);
+    border-radius: 10px;
+    width: 85vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    
+
+}
+
+/* animation  */
+@media (prefers-reduced-motion: no-preference) {
+    @view-transition {
+        navigation: auto;
+    }
+}
+
+@keyframes smoothFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px); /* Optional: gentle lift from below while fading */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes smoothFadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Apply the custom animations exclusively to your isolated credential containers */
+::view-transition-old(login-form-panel),
+::view-transition-old(signup-form-panel) {
+    animation: 250ms ease out smoothFadeOut;
+}
+
+::view-transition-new(login-form-panel),
+::view-transition-new(signup-form-panel) {
+    animation: 400ms cubic-bezier(0.4, 0, 0.2, 1) both smoothFadeIn;
+}
+
+/* Optional: Tune the duration of the traveling image sliding speed (Default is usually ~250ms) */
+::view-transition-group(sliding-image-panel) {
+    animation-duration: 500ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#login-container{
+    view-transition-name: login-form-panel;
+    display: flex;
+    flex-direction: column;
+    width: 33vw;
+    padding: 5vh;
+    font-family: "Roboto Slab", serif;
+    font-size: 7vh;
+    color: white;
+    gap: 1vh;
+    
+}
+
+#logo-header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#logo{
+    width: 4vw;
+}
+
+#brand-name{
+    font-size: 3.5vh;
+    position: relative;
+    top: -0.5vh
+
+}
+
+
+#login-word{
+    display: flex;
+    justify-content: center;
+    font-size: 5.5vh;
+
+}
+
+#emailAddressWord{
+    font-size: 3vh;
+
+}
+
+#passwordWord{
+    position: relative;
+    top: 2vh;
+    font-size: 3vh;
+}
+
+#emailAddress{
+    border-radius: 2vh;
+    width: 30.5vw;
+    height: 1vh;
+    font-size: 3vh;
+    padding: 3vh;
+    transition: outline 0.1s ease;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+#emailAddress:focus{
+    outline: none;
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    transition: outline 0.1s ease;
+}
+
+#Password{
+    position: relative;
+    top: 2vh;
+    border-radius: 2vh;
+    width: 30.5vw;
+    height: 1vh;
+    font-size: 3vh;
+    padding: 3vh;
+    transition: outline 0.1s ease;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+#Password:focus{
+    outline: none;
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    transition: outline 0.1s ease;
+}
+
+
+
+#design-container{
+    view-transition-name: sliding-image-panel;
+    width: 47.5vw;
+    background-image: url(../photos/tech-gadget-array-stockcake.jpg);
+    background-size: cover;
+    border-top-right-radius: 1.5vh;
+    border-bottom-right-radius: 1.5vh;
+    overflow: hidden;
+}
+
+#forgot-password{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: 2vh;
+    left: 0.5vw;
+    font-size: 2.2vh;
+    background-color: transparent;
+    border: none;
+    color: rgb(196, 196, 196);
+    text-decoration: underline;
+}
+
+#forgot-password:hover{
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+
+}
+
+#continue-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 6vh;
+
+}
+
+.line1{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.842);
+    width: 11vw;
+    height: 0.5px;
+}
+
+#continue{
+    position: relative;
+    top: 1.5vh; 
+    font-size: 2.2vh;
+    color: rgba(255, 255, 255, 0.842);
+}
+
+.line2{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.842);
+    width: 11vw;
+    height: 0.5px;
+}
+
+#continue-with-accounts{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 5.5vh;
+    gap: 3vh
+}
+
+#google{
+    border: 0.5px solid rgb(139, 139, 139);
+    height: 8vh;
+    width: 10vw;
+    background-color: rgba(31, 31, 31, 0.704);
+    border-radius: 0.6vw;
+    transition: background-color 0.1s ease;
+    box-shadow: 0 0 1vh 1vh rgba(255, 255, 255, 0.07);
+}
+
+#google:hover{
+    background-color: white;
+    transition: background-color 0.1s ease;
+    cursor: pointer;
+}
+
+#google-logo{
+    width: 2vw;
+}
+
+
+/* APPLE */
+#apple{
+    border: 0.5px solid rgb(139, 139, 139);
+    height: 8vh;
+    width: 10vw;
+    background-color: rgba(31, 31, 31, 0.704);
+    border-radius: 0.6vw;
+    transition: background-color 0.1s ease;
+    box-shadow: 0 0 1vh 1vh rgba(255, 255, 255, 0.07);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+#apple:hover{
+    background-color: white;
+    transition: background-color 0.1s ease;
+    cursor: pointer;
+}
+
+#apple-logo{
+    width: 2vw;
+    transition: filter 0.1s ease;
+
+}
+
+#apple:hover #apple-logo {
+    filter: brightness(0); 
+}
+
+/* Signup */
+#signup-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.7vh;
+}
+
+#Signup1{
+    position: relative;
+    top: 8.5vh;
+    font-size: 2vh;
+    color: rgb(170, 170, 170);
+}
+
+#Signup2{
+    position: relative;
+    top: 8.5vh;
+    font-size: 2vh;
+    color: rgb(170, 170, 170);
+    text-decoration: underline;
+    background-color: transparent;
+    border: none;
+
+}
+
+#Signup2:hover{
+    cursor: pointer;
+    color: white;
+}
+
+#signin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 5vh;
+    height: 5vh;
+    width: 30vw;
+    left: 1.5vw;
+    border-radius: 2vh;
+    font-size: 3vh;
+    padding: 3vh;
+    background-color: rgba(43, 49, 77, 0.575);
+    color: white;
+    border: 0.5px solid rgba(255, 255, 255, 0.192);
+    transition: background-color 0.1s, font-size 0.3s, color 0.1s ease;
+}
+
+#signin:hover{
+    cursor: pointer;
+    background-color: #d1d1d1;
+    transition: background-color 0.3s, font-size 0.3s, color 0.1s ease;
+    font-size: 3.2vh;
+    color: black;
+
+
+}
+
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+/* 2. Configure the travelling sliding panel behavior */
+::view-transition-group(sliding-image-panel) {
+    /* Use a fluid ease-out curve (smoother than the default 'ease') */
+    animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); 
+    animation-duration: 650ms; /* Slowed down slightly so you can see it slide */
+}
+
+/* 3. FIX THE JITTER/STRETCHING (Crucial Step) */
+::view-transition-old(sliding-image-panel),
+::view-transition-new(sliding-image-panel) {
+    /* Force the browser to clip the snapshot window rather than stretching the pixels */
+    object-fit: cover; 
+    height: 100%;
+    width: 100%;
+}
+
+/* 4. Smooth out your Fade In / Fade Out custom keyframes */
+@keyframes modernFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98) translateY(10px); /* Minor elegant pop effect */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes modernFadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* 5. Attach the clean fades to your form panels */
+::view-transition-old(login-form-panel),
+::view-transition-old(signup-form-panel) {
+    animation: 200ms ease-in forwards modernFadeOut;
+}
+
+::view-transition-new(login-form-panel),
+::view-transition-new(signup-form-panel) {
+    animation: 450ms cubic-bezier(0.22, 1, 0.36, 1) both modernFadeIn;
+    animation-delay: 150ms; /* Gives the image a head-start before form fades in */
+}
