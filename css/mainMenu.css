@@ -203,7 +203,6 @@ hr{
     gap: 2vh;
     padding-left: 0;
     padding-right: 1vw;
-
 }
 
 
@@ -211,9 +210,14 @@ hr{
     display: flex;
     border: 1px solid white;
     height: 25vh;
-    width: 39vw;
+    width: 28vw;
     border-radius: 3vh;
-    background-color: rgba(207, 207, 207, 0.082);
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 0.5px solid rgba(255, 255, 255, 0.233);
+    color: white;
+    box-shadow: 0 0 15px rgba(187, 187, 187, 0.11);
+    padding: 1vh;
+    box-sizing: border-box;
 }
 
 
@@ -221,19 +225,89 @@ hr{
     display: flex;
     border: 1px solid white;
     height: 25vh;
-    width: 39vw;
+    width: 28vw;
     border-radius: 3vh;
-    background-color: rgba(207, 207, 207, 0.082);
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 0.5px solid rgba(255, 255, 255, 0.233);
+    color: white;
+    box-shadow: 0 0 15px rgba(187, 187, 187, 0.11);
+    padding: 1vh;
+    box-sizing: border-box;
 
 }
 
-#notifications{
+#out-of-date{
+    display: flex;
     border: 1px solid white;
-    height: 60vh;
+    height: 25vh;
+    width: 28vw;
+    border-radius: 3vh;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 0.5px solid rgba(255, 255, 255, 0.233);
+    color: white;
+    box-shadow: 0 0 15px rgba(187, 187, 187, 0.11);
+    padding: 1vh;
+    box-sizing: border-box;
+}
+
+
+#notifications{
+    height: 68.5vh;
     width: 22vw;
     position: relative;
     left: 76.5vw;
-    bottom: 13.3vh;
+    bottom: 54vh;
     border-radius: 3vh;
-    background-color: rgba(207, 207, 207, 0.082);
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 0.5px solid rgba(255, 255, 255, 0.233);
+    color: white;
+    box-shadow: 0 0 15px rgba(187, 187, 187, 0.11);
+    padding: 1vh;
+    box-sizing: border-box;
+}
+
+
+#main-course{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    height: 35vh;
+    width: 70vw;
+    z-index: 1;
+    left: 5.5vw;
+    top: 15vh;
+    padding: 1.5vw;
+    gap: 2vh;
+    padding-left: 0;
+    padding-right: 1vw;
+}
+
+#favorite-device{
+    display: flex;
+    border: 1px solid white;
+    height: 40vh;
+    width: 50%;
+    border-radius: 3vh;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 0.5px solid rgba(255, 255, 255, 0.233);
+    color: white;
+    box-shadow: 0 0 15px rgba(187, 187, 187, 0.11);
+    padding: 1vh;
+    box-sizing: border-box;
+}
+
+#analytics-main{
+    display: flex;
+    border: 1px solid white;
+    height: 40vh;
+    width: 50%;
+    border-radius: 3vh;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 0.5px solid rgba(255, 255, 255, 0.233);
+    color: white;
+    box-shadow: 0 0 15px rgba(187, 187, 187, 0.11);
+    padding: 1vh;
+    box-sizing: border-box;
 }
