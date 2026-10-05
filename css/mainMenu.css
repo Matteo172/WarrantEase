@@ -33,6 +33,7 @@ body{
     flex-direction: column;
     position: relative;
     bottom: 22.7vh;
+    border: 1px solid white;
 
 }
 
@@ -61,6 +62,12 @@ body{
     gap: 2.5vh;
 }
 
+#id{
+    width: 3vh;
+    position: relative;
+    height: auto;
+}
+
 #settings{
     width: 3vh;
     position: relative;
@@ -80,6 +87,36 @@ body{
     position: relative;
     bottom: 5vh;
 }
+
+/* #home{
+    width: 2vw;
+    position: relative;
+    height: auto;
+}
+
+#gadget{
+    width: 2vw;
+    position: relative;
+    height: auto;
+}
+
+#notification{
+    width: 2vw;
+    position: relative;
+    height: auto;
+}
+
+#analytics{
+    width: 2vw;
+    position: relative;
+    height: auto;
+}
+
+#history{
+    width: 2vw;
+    position: relative;
+    height: auto;
+} */
 
 hr{
     width: 2.5vw;
