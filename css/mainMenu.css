@@ -88,7 +88,7 @@ body{
     bottom: 5vh;
 }
 
-/* #home{
+#home{
     width: 2vw;
     position: relative;
     height: auto;
@@ -116,7 +116,7 @@ body{
     width: 2vw;
     position: relative;
     height: auto;
-} */
+}
 
 hr{
     width: 2.5vw;
