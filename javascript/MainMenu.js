@@ -18,3 +18,11 @@ updateClock();
 
 // Update the clock every 1 second (1000ms)
 setInterval(updateClock, 1000);
+
+const logoContainer = document.getElementById('logo-container');
+    const sidebar = document.getElementById('side');
+
+    logoContainer.addEventListener('click', () => {
+        sidebar.classList.toggle('expanded');
+        
+    });
