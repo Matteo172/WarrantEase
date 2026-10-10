@@ -23,7 +23,7 @@ body{
     top: 0.7vh;
     border-radius: 3vh;
     background-color: rgba(48, 48, 48, 0.322);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.267);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.397);
     padding: 2vh 0;
     z-index: 999;
 
@@ -68,27 +68,45 @@ body{
     border-bottom-left-radius: 0vh;
 }
 
-#logo-container{
+#logo-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     bottom: 18.7vh;
-    left: 0.55vw;
-
+    width: 2.5vw; 
+    height: 2.5vw;
+    box-sizing: border-box;
+    left: 0.5vw;
+    border-radius: 20vh;
 }
 
-#logo{
+#logo-container:hover{
+    background-color: rgba(104, 104, 104, 0.438);
+}
+
+#logo {
     width: 2.5vw;
+    height: auto;
     position: relative;
-    transition: transform 0.2s ease;
     object-fit: contain;
 }
 
-#logo:hover{
+#logo:hover {
     cursor: pointer;
-    content: url(../photos/expand_circle_right_50dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png);
-    width: 2.5vw;
-    transform: scale(0.85); 
+    content: url(../photos/left_panel_open_30dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png);
+    width: 1.2vw;
+}
+
+#shrink{
+    visibility: visible;
+    width: 2vh;
+}
+
+#shrink.visibility{
+    visibility: hidden;
+    width: 1vh;
 }
 
 #sidebar-bottom{
@@ -102,16 +120,31 @@ body{
     left: 0.7vw;
 }
 
-#id{
+#help{
     width: 3vh;
     position: relative;
     height: auto;
+    visibility: visible;
+
+}   
+
+#help.visibility{
+    visibility: hidden;
 }
 
 #settings{
     width: 3vh;
     position: relative;
     height: auto;
+    left: 0vw;
+    top: 0vh;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: translate(0, 0);
+    
+}
+
+#settings.expanded{
+    transform: translate(11.8vw, 6.5vh);
 }
 
 #account{
