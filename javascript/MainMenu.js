@@ -22,9 +22,15 @@ setInterval(updateClock, 1000);
 const logoContainer = document.getElementById('logo-container');
     const sidebar = document.getElementById('side');
     const line = document.getElementById('line');
+    const settings = document.getElementById('settings');
+    const help = document.getElementById('help')
+    const shrink = document.getElementById('shrink')
 
     logoContainer.addEventListener('click', () => {
         sidebar.classList.toggle('expanded');
         line.classList.toggle('expanded');
+        settings.classList.toggle('expanded');
+        help.classList.toggle('visibility')
+        shrink.classList.toggle('visibility')
         
     });
