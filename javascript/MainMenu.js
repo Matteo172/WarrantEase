@@ -19,9 +19,8 @@ updateClock();
 // Update the clock every 1 second (1000ms)
 setInterval(updateClock, 1000);
 
-const body = document.querySelector('body');
-
-const logoContainer = document.querySelector('#logo-container');
+    const body = document.querySelector('body');
+    const logoContainer = document.querySelector('#logo-container');
     const sidebar = document.querySelector('#side');
     const line = document.querySelector('#line');
     const settings = document.querySelector('#settings');
