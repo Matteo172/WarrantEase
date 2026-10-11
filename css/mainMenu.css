@@ -6,7 +6,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
-    width: 100%;
+    
 }
 
 
@@ -74,7 +74,7 @@ body{
     align-items: center;
     justify-content: center;
     position: relative;
-    bottom: 18.7vh;
+    bottom: 14vh;
     width: 2.5vw; 
     height: 2.5vw;
     box-sizing: border-box;
@@ -86,7 +86,7 @@ body{
     background-color: rgba(104, 104, 104, 0.438);
 }
 
-#logo {
+#logo{
     width: 2.5vw;
     height: auto;
     position: relative;
@@ -99,97 +99,111 @@ body{
     width: 1.2vw;
 }
 
-#shrink{
-    visibility: visible;
-    width: 2vh;
-}
-
-#shrink.visibility{
-    visibility: hidden;
-    width: 1vh;
-}
-
-#sidebar-bottom{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    top: 19vh;
-    gap: 2.5vh;
-    left: 0.7vw;
-}
-
-#help{
-    width: 3vh;
-    position: relative;
-    height: auto;
-    visibility: visible;
-
-}   
-
-#help.visibility{
-    visibility: hidden;
-}
-
-#settings{
-    width: 3vh;
-    position: relative;
-    height: auto;
-    left: 0vw;
-    top: 0vh;
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    transform: translate(0, 0);
+#logo.expanded:hover{
     
 }
 
-#settings.expanded{
-    transform: translate(11.8vw, 6.5vh);
+#shrink{
+    opacity: 0;
+    border-radius: 50%;
+    padding: 1.3vh;
 }
 
-#account{
-    width: 2.3vw;
+#shrink.visibility{
+    opacity: 1;
+    width: 1.2vw;
     position: relative;
-    height: auto;
+    bottom: 19.2vh;
+    left: 12.5vw;
+    transition: opacity 1s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.1s ease;
+}
+
+#shrink.visibility:hover{
+    background-color: rgba(104, 104, 104, 0.438);
+    cursor: pointer;
 }
 
 #sidebar-main{
     display: flex;
-    gap: 3.3vh;
+    gap: 1.7vh;
     flex-direction: column;
     position: relative;
     bottom: 5vh;
-    left: 0.75vw;
+    left: 0.4vw;
 }
 
 #home{
     width: 2vw;
+    padding: 0.4vw;
     position: relative;
     height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: background-color 0.1s ease;
+}
+
+#home:hover{
+    background-color: rgba(104, 104, 104, 0.438);
+    object-fit: contain;
+}
+
+#home.expanded #sidebar-main:hover #home{
+    width: 5vw;
 }
 
 #gadget{
     width: 2vw;
+    padding: 0.5vw;
     position: relative;
     height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: background-color 0.1s ease;
+}
+
+#gadget:hover{
+    background-color: rgba(104, 104, 104, 0.438);
 }
 
 #notification{
     width: 2vw;
+    padding: 0.5vw;
     position: relative;
     height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: background-color 0.1s ease;
+}
+
+#notification:hover{
+    background-color: rgba(104, 104, 104, 0.438);
 }
 
 #analytics{
     width: 2vw;
+    padding: 0.5vw;
     position: relative;
     height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: background-color 0.1s ease;
+}
+
+#analytics:hover{
+    background-color: rgba(104, 104, 104, 0.438);
 }
 
 #history{
     width: 2vw;
+    padding: 0.5vw;
     position: relative;
     height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+#history:hover{
+    background-color: rgba(104, 104, 104, 0.438);
 }
 
 #line{
@@ -202,6 +216,93 @@ body{
 
 #line.expanded{
     width: 12vw; 
+}
+
+#sidebar-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 14.2vh;
+    gap: 1.4vh;
+    left: 0.35vw;
+}
+
+#help{
+    padding: 0.4vw;
+    width: 3vh;
+    position: relative;
+    height: auto;
+    visibility: visible;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: background-color 0.1s ease, opacity 0.1s ease;
+    opacity: 1;
+}   
+
+#help:hover{
+    background-color: rgba(104, 104, 104, 0.438);
+}
+
+#help.visibility{
+    opacity: 0;
+
+}
+
+#settings{
+    padding: 0.4vw;
+    width: 3vh;
+    position: relative;
+    height: auto;
+    left: 0vw;
+    top: 0vh;
+    border-radius: 50%;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.1s ease;
+    transform: translate(0, 0);
+    object-fit: contain;
+}
+
+#settings:hover{
+    background-color: rgba(104, 104, 104, 0.438);
+}
+
+#settings.expanded{
+    transform: translate(11.8vw, 6.5vh);
+    border-radius: 50%;
+}
+
+
+#settings-container{
+    width: 15vw;
+    height: 43vh;
+    background-color: rgba(32, 32, 32, 0.986);
+    border: 0.5px solid rgba(255, 255, 255, 0.103);
+    position: relative;
+    top: 49vh;
+    border-radius: 5%;
+    z-index: 9000;
+    left: 12.8vw;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.363);
+    visibility: hidden;
+}
+
+#settings-container.popOut{
+    visibility:visible;
+}
+
+#account{
+    width: 2.3vw;
+    padding: 0.3vw;
+    position: relative;
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: background-color 0.1s ease;
+}
+
+#account:hover{
+    background-color: rgba(104, 104, 104, 0.438);
 }
 
 
@@ -217,7 +318,7 @@ body{
     height: 0.5vw;
     width: 93%;
     left: 5.5vw;
-    top: 1.3vh;
+    bottom: 42vh;
     border-radius: 3vh;
     background-color: rgba(48, 48, 48, 0.322);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.267);
@@ -315,7 +416,7 @@ body{
     width: 70vw;
     z-index: 1;
     left: 5.5vw;
-    top: 13vh;
+    bottom: 28vh;
     padding: 1.5vw;
     gap: 2vh;
     padding-left: 0;
@@ -373,7 +474,7 @@ body{
     width: 22vw;
     position: relative;
     left: 76.5vw;
-    bottom: 54vh;
+    bottom: 94.7vh;
     border-radius: 3vh;
     background-color: rgba(255, 255, 255, 0.06);
     border: 0.5px solid rgba(255, 255, 255, 0.233);
@@ -394,7 +495,7 @@ body{
     width: 70vw;
     z-index: 1;
     left: 5.5vw;
-    top: 15vh;
+    bottom: 27vh;
     padding: 1.5vw;
     gap: 2vh;
     padding-left: 0;
