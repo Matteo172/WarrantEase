@@ -74,7 +74,7 @@ body{
     align-items: center;
     justify-content: center;
     position: relative;
-    bottom: 14vh;
+    bottom: 12.5vh;
     width: 2.5vw; 
     height: 2.5vw;
     box-sizing: border-box;
@@ -224,7 +224,7 @@ body{
     align-items: center;
     flex-direction: column;
     position: relative;
-    top: 14.2vh;
+    top: 13vh;
     gap: 1.4vh;
     left: 0.35vw;
 }
@@ -272,14 +272,13 @@ body{
     border-radius: 50%;
 }
 
-
 #settings-container{
     width: 15vw;
     height: 43vh;
     background-color: rgba(32, 32, 32, 0.986);
     border: 0.5px solid rgba(255, 255, 255, 0.103);
-    position: relative;
-    top: 49vh;
+    position: absolute; 
+    top: 48vh;
     border-radius: 5%;
     z-index: 9000;
     left: 12.8vw;
@@ -287,8 +286,23 @@ body{
     visibility: hidden;
 }
 
+@keyframes settings-animation {
+    from{
+        height: 20vh;
+        opacity: 0;
+
+    }
+
+    to{
+        height: 43vh;
+        opacity: 1;
+
+    }
+}
+
 #settings-container.popOut{
-    visibility:visible;
+    visibility: visible;
+    animation: settings-animation 0.1s ease;
 }
 
 #account{
@@ -318,7 +332,7 @@ body{
     height: 0.5vw;
     width: 93%;
     left: 5.5vw;
-    bottom: 42vh;
+    top: 1vh;
     border-radius: 3vh;
     background-color: rgba(48, 48, 48, 0.322);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.267);
@@ -416,7 +430,7 @@ body{
     width: 70vw;
     z-index: 1;
     left: 5.5vw;
-    bottom: 28vh;
+    top: 17vh;
     padding: 1.5vw;
     gap: 2vh;
     padding-left: 0;
@@ -474,7 +488,7 @@ body{
     width: 22vw;
     position: relative;
     left: 76.5vw;
-    bottom: 94.7vh;
+    bottom: 50vh;
     border-radius: 3vh;
     background-color: rgba(255, 255, 255, 0.06);
     border: 0.5px solid rgba(255, 255, 255, 0.233);
@@ -495,7 +509,7 @@ body{
     width: 70vw;
     z-index: 1;
     left: 5.5vw;
-    bottom: 27vh;
+    top: 18vh;
     padding: 1.5vw;
     gap: 2vh;
     padding-left: 0;
