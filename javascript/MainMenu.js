@@ -24,22 +24,40 @@ setInterval(updateClock, 1000);
     const sidebar = document.querySelector('#side');
     const line = document.querySelector('#line');
     const settings = document.querySelector('#settings');
-    const help = document.querySelector('#help')
-    const shrink = document.querySelector('#shrink')
+    const help = document.querySelector('#help');
+    const shrink = document.querySelector('#shrink');
+    const settingsExpanded = document.querySelector("#settings-container"); 
 
     logoContainer.addEventListener('click', () => {
         sidebar.classList.toggle('expanded');
         line.classList.toggle('expanded');
         settings.classList.toggle('expanded');
-        help.classList.toggle('visibility')
-        shrink.classList.toggle('visibility')
-        
+        help.classList.toggle('visibility');
+        shrink.classList.toggle('visibility');
+
+    });
+
+    
+    settings.addEventListener('click', (e) => {
+        e.stopPropagation();
+
+        if(sidebar.classList.contains('expanded')){
+            settingsExpanded.classList.toggle('popOut');
+            settingsExpanded.classList.remove('popIn');
+        }else{
+            settingsExpanded.classList.toggle('popIn');
+            settingsExpanded.classList.remove('popOut');
+        }
+
     });
 
 
-    const settingsExpanded = document.querySelector("#settings-container");
+    document.addEventListener('click', (e) => {
+        if(!settings.contains(e.target) && !settingsExpanded.contains(e.target)){
+            settingsExpanded.classList.remove('popOut');
+            settingsExpanded.classList.remove('popIn');
+        }
+    });
 
-    settings.addEventListener('click', () => {
-        settingsExpanded.classList.toggle('popOut')
 
-    })
+    
