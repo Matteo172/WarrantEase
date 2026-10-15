@@ -278,23 +278,23 @@ body{
     background-color: rgba(32, 32, 32, 0.986);
     border: 0.5px solid rgba(255, 255, 255, 0.103);
     position: absolute; 
-    top: 48vh;
     border-radius: 5%;
     z-index: 9000;
-    left: 12.8vw;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.363);
     visibility: hidden;
 }
 
 @keyframes settings-animation {
     from{
-        height: 20vh;
+        transform: scale(0);
+        /* height: 20vh; */
         opacity: 0;
 
     }
 
     to{
-        height: 43vh;
+        transform: scale(1);
+        /* height: 43vh; */
         opacity: 1;
 
     }
@@ -302,7 +302,26 @@ body{
 
 #settings-container.popOut{
     visibility: visible;
-    animation: settings-animation 0.1s ease;
+    animation: settings-animation 0.1s ease, transform-origin 1s ease;
+    top: 48vh;
+    left: 12.8vw;
+    transform-origin: bottom left;
+}
+
+#settings-container.popIn{
+    width: 15vw;
+    height: 43vh;
+    background-color: rgba(32, 32, 32, 0.986);
+    border: 0.5px solid rgba(255, 255, 255, 0.103);
+    position: absolute; 
+    border-radius: 5%;
+    z-index: 9000;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.363);
+    visibility: visible;
+    top: 42vh;
+    left: 1.5vw;
+    animation: settings-animation 0.1s ease, transform-origin 1s ease;
+    transform-origin: bottom left;
 }
 
 #account{
