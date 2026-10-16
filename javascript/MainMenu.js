@@ -27,6 +27,12 @@ setInterval(updateClock, 1000);
     const help = document.querySelector('#help');
     const shrink = document.querySelector('#shrink');
     const settingsExpanded = document.querySelector("#settings-container"); 
+    const home = document.querySelector("#home");
+    const gadget = document.querySelector("#gadget");
+    const notification = document.querySelector("#notification");
+    const analytics = document.querySelector("#analytics");
+    const history = document.querySelector("#history");
+
 
     logoContainer.addEventListener('click', () => {
         sidebar.classList.toggle('expanded');
@@ -34,6 +40,20 @@ setInterval(updateClock, 1000);
         settings.classList.toggle('expanded');
         help.classList.toggle('visibility');
         shrink.classList.toggle('visibility');
+
+        if(sidebar.classList.contains('expanded')){
+            home.classList.toggle('home-visibility');
+            gadget.classList.toggle('gadget-visibility');
+            notification.classList.toggle('notification-visibility');
+            analytics.classList.toggle('analytics-visibility');
+            history.classList.toggle('history-visibility');
+        }else{
+            home.classList.remove('visibility');
+            gadget.classList.remove('visibility');
+            notification.classList.remove('visibility');
+            analytics.classList.remove('visibility');
+            history.classList.remove('visibility');
+        }
 
     });
 
@@ -60,4 +80,7 @@ setInterval(updateClock, 1000);
     });
 
 
-    
+
+
+
+
