@@ -42,11 +42,11 @@ setInterval(updateClock, 1000);
         shrink.classList.toggle('visibility');
 
         if(sidebar.classList.contains('expanded')){
-            home.classList.toggle('home-visibility');
-            gadget.classList.toggle('gadget-visibility');
-            notification.classList.toggle('notification-visibility');
-            analytics.classList.toggle('analytics-visibility');
-            history.classList.toggle('history-visibility');
+            home.classList.add('home-visibility');
+            gadget.classList.add('gadget-visibility');
+            notification.classList.add('notification-visibility');
+            analytics.classList.add('analytics-visibility');
+            history.classList.add('history-visibility');
         }else{
             home.classList.remove('visibility');
             gadget.classList.remove('visibility');
