@@ -147,8 +147,9 @@ body{
     object-fit: contain;
 }
 
-#home.expanded #sidebar-main:hover #home{
-    width: 5vw;
+#home.home-visibility{
+    padding-right: 11.5vw;
+    border-radius: 3vh;
 }
 
 #gadget{
@@ -277,11 +278,13 @@ body{
     height: 43vh;
     background-color: rgba(32, 32, 32, 0.986);
     border: 0.5px solid rgba(255, 255, 255, 0.103);
-    position: absolute; 
+    position: fixed; 
     border-radius: 5%;
     z-index: 9000;
+    padding: 2vh;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.363);
     visibility: hidden;
+
 }
 
 @keyframes settings-animation {
@@ -303,7 +306,7 @@ body{
 #settings-container.popOut{
     visibility: visible;
     animation: settings-animation 0.1s ease, transform-origin 1s ease;
-    top: 48vh;
+    top: 44vh;
     left: 12.8vw;
     transform-origin: bottom left;
 }
@@ -313,13 +316,13 @@ body{
     height: 43vh;
     background-color: rgba(32, 32, 32, 0.986);
     border: 0.5px solid rgba(255, 255, 255, 0.103);
-    position: absolute; 
+    position: fixed; 
     border-radius: 5%;
     z-index: 9000;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.363);
     visibility: visible;
-    top: 42vh;
-    left: 1.5vw;
+    top: 38vh;
+    left: 2vw;
     animation: settings-animation 0.1s ease, transform-origin 1s ease;
     transform-origin: bottom left;
 }
