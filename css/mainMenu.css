@@ -74,7 +74,7 @@ body{
     align-items: center;
     justify-content: center;
     position: relative;
-    bottom: 12.5vh;
+    bottom: 11vh;
     width: 2.5vw; 
     height: 2.5vw;
     box-sizing: border-box;
@@ -113,7 +113,7 @@ body{
     opacity: 1;
     width: 1.2vw;
     position: relative;
-    bottom: 19.2vh;
+    bottom: 16.8vh;
     left: 12.5vw;
     transition: opacity 1s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.1s ease;
 }
@@ -166,6 +166,11 @@ body{
     background-color: rgba(104, 104, 104, 0.438);
 }
 
+#gadget.gadget-visibility{
+    padding-right: 11.5vw;
+    border-radius: 3vh;
+}
+
 #notification{
     width: 2vw;
     padding: 0.5vw;
@@ -178,6 +183,11 @@ body{
 
 #notification:hover{
     background-color: rgba(104, 104, 104, 0.438);
+}
+
+#notification.notification-visibility{
+    padding-right: 11.5vw;
+    border-radius: 3vh;
 }
 
 #analytics{
@@ -194,6 +204,11 @@ body{
     background-color: rgba(104, 104, 104, 0.438);
 }
 
+#analytics.analytics-visibility{
+    padding-right: 11.5vw;
+    border-radius: 3vh;
+}
+
 #history{
     width: 2vw;
     padding: 0.5vw;
@@ -205,6 +220,11 @@ body{
 
 #history:hover{
     background-color: rgba(104, 104, 104, 0.438);
+}
+
+#history.history-visibility{
+    padding-right: 11.5vw;
+    border-radius: 3vh;
 }
 
 #line{
@@ -225,7 +245,7 @@ body{
     align-items: center;
     flex-direction: column;
     position: relative;
-    top: 13vh;
+    top: 12vh;
     gap: 1.4vh;
     left: 0.35vw;
 }

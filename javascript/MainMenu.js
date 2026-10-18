@@ -48,11 +48,11 @@ setInterval(updateClock, 1000);
             analytics.classList.add('analytics-visibility');
             history.classList.add('history-visibility');
         }else{
-            home.classList.remove('visibility');
-            gadget.classList.remove('visibility');
-            notification.classList.remove('visibility');
-            analytics.classList.remove('visibility');
-            history.classList.remove('visibility');
+            home.classList.remove('home-visibility');
+            gadget.classList.remove('gadget-visibility');
+            notification.classList.remove('notification-visibility');
+            analytics.classList.remove('analytics-visibility');
+            history.classList.remove('history-visibility');
         }
 
     });
