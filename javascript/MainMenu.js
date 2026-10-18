@@ -32,6 +32,11 @@ setInterval(updateClock, 1000);
     const notification = document.querySelector("#notification");
     const analytics = document.querySelector("#analytics");
     const history = document.querySelector("#history");
+    const homeWord = document.querySelector('.home-word');
+    const gadgetWord = document.querySelector('.gadget-word');
+    const notificationWord = document.querySelector('.notification-word');
+    const analyticsWord = document.querySelector('.analytics-word');
+    const historyWord = document.querySelector('.history-word');
 
 
     logoContainer.addEventListener('click', () => {
@@ -47,12 +52,24 @@ setInterval(updateClock, 1000);
             notification.classList.add('notification-visibility');
             analytics.classList.add('analytics-visibility');
             history.classList.add('history-visibility');
+
+            homeWord.classList.add('homeWord-visibility');
+            gadgetWord.classList.add('gadgetWord-visibility');
+            notificationWord.classList.add('notificationWord-visibility');
+            analyticsWord.classList.add('analyticsWord-visibility');
+            historyWord.classList.add('historyWord-visibility');
         }else{
-            home.classList.remove('visibility');
-            gadget.classList.remove('visibility');
-            notification.classList.remove('visibility');
-            analytics.classList.remove('visibility');
-            history.classList.remove('visibility');
+            home.classList.remove('home-visibility');
+            gadget.classList.remove('gadget-visibility');
+            notification.classList.remove('notification-visibility');
+            analytics.classList.remove('analytics-visibility');
+            history.classList.remove('history-visibility');
+
+            homeWord.classList.remove('homeWord-visibility');
+            gadgetWord.classList.remove('gadgetWord-visibility');
+            notificationWord.classList.remove('notificationWord-visibility');
+            analyticsWord.classList.remove('analyticsWord-visibility');
+            historyWord.classList.remove('historyWord-visibility');
         }
 
     });

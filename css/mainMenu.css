@@ -74,7 +74,7 @@ body{
     align-items: center;
     justify-content: center;
     position: relative;
-    bottom: 12.5vh;
+    bottom: 11vh;
     width: 2.5vw; 
     height: 2.5vw;
     box-sizing: border-box;
@@ -113,7 +113,7 @@ body{
     opacity: 1;
     width: 1.2vw;
     position: relative;
-    bottom: 19.2vh;
+    bottom: 16.8vh;
     left: 12.5vw;
     transition: opacity 1s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.1s ease;
 }
@@ -123,10 +123,11 @@ body{
     cursor: pointer;
 }
 
+/* sidebar Main */
 #sidebar-main{
     display: flex;
-    gap: 1.7vh;
     flex-direction: column;
+    gap: 1.7vh;
     position: relative;
     bottom: 5vh;
     left: 0.4vw;
@@ -140,6 +141,7 @@ body{
     object-fit: contain;
     border-radius: 50%;
     transition: background-color 0.1s ease;
+    background-color: rgba(20, 20, 20, 0.934);
 }
 
 #home:hover{
@@ -150,6 +152,21 @@ body{
 #home.home-visibility{
     padding-right: 11.5vw;
     border-radius: 3vh;
+}
+
+.home-word{
+    color: rgba(216, 216, 216, 0.904);
+    font-family: "Roboto Slab", serif;
+    font-size: 1.9vh;
+    opacity: 0;
+    position: absolute;
+    top: 2.1vh;
+    left: 3.4vw;
+    cursor: default;
+}
+
+.home-word.homeWord-visibility{
+    opacity: 1;
 }
 
 #gadget{
@@ -166,6 +183,26 @@ body{
     background-color: rgba(104, 104, 104, 0.438);
 }
 
+#gadget.gadget-visibility{
+    padding-right: 11.5vw;
+    border-radius: 3vh;
+}
+
+.gadget-word{
+    color: rgba(216, 216, 216, 0.904);
+    font-family: "Roboto Slab", serif;
+    font-size: 1.9vh;
+    opacity: 0;
+    position: absolute;
+    top: 9.7vh;
+    left: 3.4vw;
+    cursor: default;
+}
+
+.gadget-word.gadgetWord-visibility{
+    opacity: 1;
+}
+
 #notification{
     width: 2vw;
     padding: 0.5vw;
@@ -178,6 +215,26 @@ body{
 
 #notification:hover{
     background-color: rgba(104, 104, 104, 0.438);
+}
+
+#notification.notification-visibility{
+    padding-right: 11.5vw;
+    border-radius: 3vh;
+}
+
+.notification-word{
+    color: rgba(216, 216, 216, 0.904);
+    font-family: "Roboto Slab", serif;
+    font-size: 1.9vh;
+    opacity: 0;
+    position: absolute;
+    top: 18.3vh;
+    left: 3.4vw;
+    cursor: default;
+}
+
+.notification-word.notificationWord-visibility{
+    opacity: 1;
 }
 
 #analytics{
@@ -194,6 +251,26 @@ body{
     background-color: rgba(104, 104, 104, 0.438);
 }
 
+#analytics.analytics-visibility{
+    padding-right: 11.5vw;
+    border-radius: 3vh;
+}
+
+.analytics-word{
+    color: rgba(216, 216, 216, 0.904);
+    font-family: "Roboto Slab", serif;
+    font-size: 1.9vh;
+    opacity: 0;
+    position: absolute;
+    top: 26.6vh;
+    left: 3.4vw;
+    cursor: default;
+}
+
+.analytics-word.analyticsWord-visibility{
+    opacity: 1;
+}
+
 #history{
     width: 2vw;
     padding: 0.5vw;
@@ -205,6 +282,26 @@ body{
 
 #history:hover{
     background-color: rgba(104, 104, 104, 0.438);
+}
+
+#history.history-visibility{
+    padding-right: 11.5vw;
+    border-radius: 3vh;
+}
+
+.history-word{
+    color: rgba(216, 216, 216, 0.904);
+    font-family: "Roboto Slab", serif;
+    font-size: 1.9vh;
+    opacity: 0;
+    position: absolute;
+    top: 35vh;
+    left: 3.4vw;
+    cursor: default;
+}
+
+.history-word.historyWord-visibility{
+    opacity: 1;
 }
 
 #line{
@@ -225,7 +322,7 @@ body{
     align-items: center;
     flex-direction: column;
     position: relative;
-    top: 13vh;
+    top: 12vh;
     gap: 1.4vh;
     left: 0.35vw;
 }
@@ -428,7 +525,7 @@ body{
     position: relative;
     right: 30vw;
     font-size: 1.7vh;
-    color: rgb(216, 216, 216);
+    color: rgba(216, 216, 216, 0.847);
     font-family: "Roboto Slab", serif;
 }
 
