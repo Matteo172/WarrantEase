@@ -141,7 +141,7 @@ body{
     object-fit: contain;
     border-radius: 50%;
     transition: background-color 0.1s ease;
-    background-color: rgba(20, 20, 20, 0.934);
+    background-color: rgb(6, 6, 6);
 }
 
 #home:hover{
@@ -152,6 +152,12 @@ body{
 #home.home-visibility{
     padding-right: 11.5vw;
     border-radius: 3vh;
+    background-color: rgba(32, 32, 32, 0.934);
+}
+
+#home.home-visibility:hover{
+    background-color: rgba(104, 104, 104, 0.438);
+    object-fit: contain;
 }
 
 .home-word{
@@ -228,7 +234,7 @@ body{
     font-size: 1.9vh;
     opacity: 0;
     position: absolute;
-    top: 18.3vh;
+    top: 17.8vh;
     left: 3.4vw;
     cursor: default;
 }
@@ -262,7 +268,7 @@ body{
     font-size: 1.9vh;
     opacity: 0;
     position: absolute;
-    top: 26.6vh;
+    top: 25.8vh;
     left: 3.4vw;
     cursor: default;
 }
@@ -295,7 +301,7 @@ body{
     font-size: 1.9vh;
     opacity: 0;
     position: absolute;
-    top: 35vh;
+    top: 33.7vh;
     left: 3.4vw;
     cursor: default;
 }
