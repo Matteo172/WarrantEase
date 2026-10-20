@@ -72,8 +72,27 @@ setInterval(updateClock, 1000);
             historyWord.classList.remove('historyWord-visibility');
         }
 
-    });
+        shrink.addEventListener('click', () => {
+            sidebar.classList.remove('expanded');
+            line.classList.remove('expanded');
+            settings.classList.remove('expanded');
+            help.classList.remove('visibility');
+            shrink.classList.remove('visibility');
+            home.classList.remove('home-visibility');
+            gadget.classList.remove('gadget-visibility');
+            notification.classList.remove('notification-visibility');
+            analytics.classList.remove('analytics-visibility');
+            history.classList.remove('history-visibility');
 
+            homeWord.classList.remove('homeWord-visibility');
+            gadgetWord.classList.remove('gadgetWord-visibility');
+            notificationWord.classList.remove('notificationWord-visibility');
+            analyticsWord.classList.remove('analyticsWord-visibility');
+            historyWord.classList.remove('historyWord-visibility');
+
+        })
+
+    });
     
     settings.addEventListener('click', (e) => {
         e.stopPropagation();
