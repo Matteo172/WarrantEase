@@ -93,15 +93,18 @@ body{
     object-fit: contain;
 }
 
-#logo:hover {
+#side:not(.expanded) #logo:hover {
     cursor: pointer;
     content: url(../photos/left_panel_open_30dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png);
     width: 1.2vw;
 }
 
-#logo.expanded:hover{
-    
+#side.expanded #logo:hover {
+    cursor: default;
+    content: normal;
+    width: 2.5vw;
 }
+
 
 #shrink{
     opacity: 0;
