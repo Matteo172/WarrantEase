@@ -144,7 +144,6 @@ body{
     object-fit: contain;
     border-radius: 50%;
     transition: background-color 0.1s ease;
-    background-color: rgb(6, 6, 6);
 }
 
 #home:hover{
@@ -155,7 +154,6 @@ body{
 #home.home-visibility{
     padding-right: 11.5vw;
     border-radius: 3vh;
-    background-color: rgba(32, 32, 32, 0.934);
 }
 
 #home.home-visibility:hover{
@@ -186,6 +184,7 @@ body{
     object-fit: contain;
     border-radius: 50%;
     transition: background-color 0.1s ease;
+    background-color: rgb(6, 6, 6);
 }
 
 #gadget:hover{
@@ -195,6 +194,12 @@ body{
 #gadget.gadget-visibility{
     padding-right: 11.5vw;
     border-radius: 3vh;
+    background-color: rgba(32, 32, 32, 0.934);
+}
+
+#gadget.gadget-visibility:hover{
+    background-color: rgba(104, 104, 104, 0.438);
+    object-fit: contain;
 }
 
 .gadget-word{
