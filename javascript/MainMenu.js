@@ -26,7 +26,7 @@ setInterval(updateClock, 1000);
     const settings = document.querySelector('#settings');
     const help = document.querySelector('#help');
     const shrink = document.querySelector('#shrink');
-    const settingsExpanded = document.querySelector("#settings-container"); 
+    let settingsExpanded = document.querySelector("#settings-container"); 
     const home = document.querySelector("#home");
     const gadget = document.querySelector("#gadget");
     const notification = document.querySelector("#notification");
